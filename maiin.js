@@ -18,8 +18,5 @@ console.log(solution(["aba", "aa", "ad", "vcd", "aba"]))
 
 
 // Melhor solução
-function solution2(inputArray) {
-    let maxSize = Math.max(...inputArray.map(x => x.length));
-    return inputArray.filter(x => x.length === maxSize);
-}
+const solution2 = inputArray => inputArray.filter(x => x.length === Math.max(...inputArray.map(x => x.length)))
 console.log(solution2(["aba", "aa", "ad", "vcd", "aba"]))
